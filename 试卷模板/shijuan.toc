@@ -1,0 +1,21 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}快速入门与基本结构}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}文档类选项}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}试卷分套规则}{6}{section.1.2}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}题目与选项环境}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}example 环境基本语法}{10}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}题型编号}{10}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}题源信息（可选参数）}{10}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}选择题排版：choices 环境}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}大题标题：\texttt {\textbackslash parttitle}}{14}{section.2.3}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}答案、解析与隐藏控制}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}答案的显示与隐藏}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}考点、答案与解析专用环境}{19}{section.3.2}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}其他常用命令}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}填空与横线}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}带圈数字}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}彩色提示盒 hezi}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}不编号章节}{27}{section.4.4}%
+\contentsline {section}{\numberline {4.5*}附录：代码排版示例}{29}{section.4.5}%
+\contentsline {section}{\numberline {4.6}其他数学符号}{31}{section.4.6}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}完整示例}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}2025年普通高等学校招生全国统一考试(新高考1卷)}{34}{section.5.1}%
