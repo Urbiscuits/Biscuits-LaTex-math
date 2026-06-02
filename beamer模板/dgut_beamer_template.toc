@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{情境引入}{4}{0}{1}
+\beamer@sectionintoc {2}{定义与性质}{7}{0}{2}
+\beamer@sectionintoc {3}{判断方法}{15}{0}{3}
+\beamer@sectionintoc {4}{性质与证明}{17}{0}{4}
+\beamer@sectionintoc {5}{例题精讲}{25}{0}{5}
+\beamer@sectionintoc {6}{课堂练习}{36}{0}{6}
+\beamer@sectionintoc {7}{课堂小结}{45}{0}{7}

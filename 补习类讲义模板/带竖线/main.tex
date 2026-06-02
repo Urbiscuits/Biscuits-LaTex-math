@@ -1,13 +1,13 @@
 \documentclass[
-showanswers,        % 显示答案
+noshowanswers,        % 显示答案
 answercolor=red,    % 答案颜色
 paper=a4,           % 纸张大小
 sectioncolor=cyan,  % 控制section颜色
 subsectioncolor=cyan,
 exercisecolor=orange, % 练习题颜色
 examplecolor=cyan,    % 例题颜色
-bianshicolor=purple,   % 变式题颜色
-twocolumn 
+bianshicolor=purple  % 变式题颜色
+%twocolumn 
 ]{biscuits}
 
 % ============== 双栏间距控制 ==============
@@ -79,9 +79,14 @@ twocolumn
 	\item 熟练应用导数研究不等式恒成立与零点问题
 \end{introduction}
 \begin{knowledge}{导数应用核心步骤}
+\parttitle{知识回顾}
 	求解函数单调性、极值与最值问题需遵循标准化解题流程：第一步，优先确定函数定义域，所有导数分析、零点求解、极值判定均需在定义域范围内进行，杜绝定义域外无效解。第二步，对函数求导并彻底化简，结合四则求导、复合函数求导法则整理导函数，尽量化为因式乘积、分式最简形式，便于后续符号判断。第三步，求解临界点，令导函数为零求解驻点，同时找出定义域内导数不存在但函数连续的特殊点，统一作为可疑极值点。第四步，以临界点为分界点划分单调区间，列表判定各区间内导函数正负，确定函数增减性。第五步，根据导数左右符号变化判定极值，左增右减为极大值点，左减右增为极小值点，符号无变化则无极值。第六步，结合区间端点、极值点函数值，综合对比得到函数最值。
+
+    
 \end{knowledge}
-	\subsection{基础巩固：单调性与极值}
+
+	\subsection{题型精讲}
+  \tixing{单调性}  
 \begin{example}{1}[2025][全国][高三][模拟题][第1题]
 	函数$f(x)=x^3-3x$的单调递增区间为\blankbox
 	\begin{choices}

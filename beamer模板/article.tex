@@ -1,0 +1,49 @@
+\documentclass{biscuitsarticle}
+\usepackage{blindtext}
+
+\title{函数的奇偶性}
+\author{Biscuits}
+\date{2025年秋季}
+
+\begin{document}
+
+	
+	\section{情境引入}
+	
+	\begin{sikao}
+		观察图象，绿色曲线关于 $y$ 轴对称，紫色曲线关于原点对称。\\
+		这种对称性能否用数学式子精确描述？
+	\end{sikao}
+	
+	\section{定义与性质}
+	\begin{definition}[偶函数]
+		设函数 $f(x)$ 的定义域为 $D$，若对任意 $x\in D$，都有 $-x\in D$，且
+		\[ f(-x)=f(x), \]
+		则称 $f(x)$ 为\textbf{偶函数}。
+	\end{definition}
+	
+	\begin{exercise}{1}[2025][全国卷][高一][期中][第1题]
+		下列函数中，既是偶函数又在 $(0,+\infty)$ 上单调递增的是
+		\begin{choices}
+			\choice{$y=x^3$}
+			\choice{$y=|x|+1$}
+			\choice{$y=-x^2$}
+			\choice{$y=2^{-x}$}
+		\end{choices}
+	\end{exercise}
+	
+	\begin{solutions}
+		\textbf{A.} $y=x^3$ 是奇函数，$\times$\\
+		\textbf{B.} $y=|x|+1$ 是偶函数，在 $(0,+\infty)$ 上 $y=x+1$ 单调递增，$\checkmark$\\
+		\textbf{C.} $y=-x^2$ 是偶函数，但在 $(0,+\infty)$ 上单调递减，$\times$\\
+		\textbf{D.} $y=2^{-x}$ 非奇非偶，$\times$
+	\end{solutions}
+	
+	\section{课堂小结}
+	\begin{quan}
+		\item 理解奇偶性的定义与判断步骤。
+		\item 掌握常见奇偶函数的图象特征。
+		\item 能利用奇偶性解决求值、求解析式等问题。
+	\end{quan}
+	
+\end{document}

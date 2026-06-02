@@ -1,0 +1,432 @@
+{
+  "file": "E:\\LaTeXVScode\\beamer模板\\全国1卷.with_kaodian.tex",
+  "blocks": [
+    {
+      "index": 1,
+      "env": "example",
+      "begin_line_no": 2,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第1题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 2,
+      "env": "example",
+      "begin_line_no": 13,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第1题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 3,
+      "env": "example",
+      "begin_line_no": 30,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第2题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 4,
+      "env": "example",
+      "begin_line_no": 41,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第2题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 5,
+      "env": "example",
+      "begin_line_no": 58,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第3题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 6,
+      "env": "example",
+      "begin_line_no": 69,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第3题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 7,
+      "env": "example",
+      "begin_line_no": 87,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第4题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 8,
+      "env": "example",
+      "begin_line_no": 98,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第5题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 9,
+      "env": "example",
+      "begin_line_no": 109,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第6题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 10,
+      "env": "example",
+      "begin_line_no": 120,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第7题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 11,
+      "env": "example",
+      "begin_line_no": 131,
+      "question_type": "1",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第8题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 12,
+      "env": "example",
+      "begin_line_no": 142,
+      "question_type": "2",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第9题",
+        "多选"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 13,
+      "env": "example",
+      "begin_line_no": 153,
+      "question_type": "2",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第10题",
+        "多选"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 14,
+      "env": "example",
+      "begin_line_no": 164,
+      "question_type": "2",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第11题",
+        "多选"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 15,
+      "env": "example",
+      "begin_line_no": 175,
+      "question_type": "3",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第12题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 16,
+      "env": "example",
+      "begin_line_no": 180,
+      "question_type": "3",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第13题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 17,
+      "env": "example",
+      "begin_line_no": 185,
+      "question_type": "3",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第14题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 18,
+      "env": "example",
+      "begin_line_no": 190,
+      "question_type": "4",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第15题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 19,
+      "env": "example",
+      "begin_line_no": 199,
+      "question_type": "4",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第16题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 20,
+      "env": "example",
+      "begin_line_no": 208,
+      "question_type": "4",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第17题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 21,
+      "env": "example",
+      "begin_line_no": 255,
+      "question_type": "4",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第18题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    },
+    {
+      "index": 22,
+      "env": "example",
+      "begin_line_no": 268,
+      "question_type": "4",
+      "header_args": [
+        "2025",
+        "全国2卷",
+        "高三",
+        "高考",
+        "第19题"
+      ],
+      "has_kaodian": false,
+      "kaodian_value": null,
+      "action": "none",
+      "issues": [
+        "missing_proof_env"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 22,
+    "inserted_kaodian": 0,
+    "header_fixed": 0,
+    "issues": 22
+  }
+}

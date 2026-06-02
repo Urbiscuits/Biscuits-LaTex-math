@@ -1,0 +1,515 @@
+
+\section{情境引入}
+
+\begin{frame}{函数图形的对称美}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.65]
+			% y轴
+			\draw[->,LineGray] (-4.5,0) -- (4.5,0) node[below] {$x$};
+			\draw[->,LineGray] (0,-2.5) -- (0,2.5) node[left] {$y$};
+			\draw[LineGray!30] (0,-2.5) -- (0,2.5);
+			% 偶函数：抛物线 y=x^2
+			\draw[PrimaryGreen, thick, domain=-2:2, samples=100] plot(\x, {\x*\x/2});
+			\node[PrimaryGreen] at (2.2,2) {$y=\frac12x^2$};
+			% 奇函数：y=x^3/3
+			\draw[TheoremFrame, thick, domain=-2:2, samples=100] plot(\x, {\x*\x*\x/3});
+			\node[TheoremFrame] at (1.3,-1.4) {$y=\frac13x^3$};
+			% 对称标注
+			\draw[LineGray,dashed] (-1.5,0) -- (-1.5,1.125);
+			\draw[LineGray,dashed] (1.5,0) -- (1.5,1.125);
+			\fill[PrimaryGreen] (-1.5,1.125) circle (2pt);
+			\fill[PrimaryGreen] (1.5,1.125) circle (2pt);
+		\end{tikzpicture}
+	\end{center}
+	\begin{sikao}
+		观察图象，绿色曲线关于 $y$ 轴对称，紫色曲线关于原点对称。\\
+		这种对称性能否用数学式子精确描述？
+	\end{sikao}
+\end{frame}
+
+\begin{frame}{从具体函数发现规律}
+	\begin{columns}[T]
+		\begin{column}{0.48\textwidth}
+			\centering
+			\textbf{探究1：$f(x)=x^2$}
+			\begin{tabular}{c|c|c|c|c|c}
+				\toprule
+				$x$ & $-2$ & $-1$ & $0$ & $1$ & $2$ \\
+				\midrule
+				$f(x)$ & $4$ & $1$ & $0$ & $1$ & $4$ \\
+				\bottomrule
+			\end{tabular}
+			\vspace{3mm}
+			\begin{tikzpicture}[scale=0.55]
+				\draw[->] (-2.5,0) -- (2.5,0) node[below] {$x$};
+				\draw[->] (0,-0.5) -- (0,4.5) node[left] {$y$};
+				\draw[PrimaryGreen, thick, domain=-2:2, samples=50] plot(\x, {\x*\x});
+				\foreach \x in {-2,-1,0,1,2}
+				\fill[PrimaryGreen] (\x, {\x*\x}) circle (2pt);
+			\end{tikzpicture}
+			\vspace{2mm}
+			\color{PrimaryGreen} 发现：$f(-x)=f(x)$
+		\end{column}
+		\begin{column}{0.48\textwidth}
+			\centering
+			\textbf{探究2：$f(x)=x^3$}
+			\begin{tabular}{c|c|c|c|c|c}
+				\toprule
+				$x$ & $-2$ & $-1$ & $0$ & $1$ & $2$ \\
+				\midrule
+				$f(x)$ & $-8$ & $-1$ & $0$ & $1$ & $8$ \\
+				\bottomrule
+			\end{tabular}
+			\vspace{3mm}
+			\begin{tikzpicture}[scale=0.55, yscale=0.3]  % 纵向压缩
+				\draw[->] (-2.5,0) -- (2.5,0) node[below] {$x$};
+				\draw[->] (0,-8.5) -- (0,8.5) node[left] {$y$};
+				\draw[TheoremFrame, thick, domain=-2:2, samples=50] plot(\x, {\x*\x*\x});
+				\foreach \x in {-2,-1,0,1,2}
+				\fill[TheoremFrame] (\x, {\x*\x*\x}) circle (2pt);
+			\end{tikzpicture}
+			\vspace{2mm}
+			\color{TheoremFrame} 发现：$f(-x)=-f(x)$
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{定义与性质}
+
+\begin{frame}{偶函数的定义}
+	\begin{definition}[偶函数]
+		设函数 $f(x)$ 的定义域为 $D$，若对任意 $x\in D$，都有 $-x\in D$，且
+		\[
+		f(-x)=f(x),
+		\]
+		则称 $f(x)$ 为\textbf{偶函数}。
+	\end{definition}
+	\pause
+	\begin{remark}
+		\begin{itemize}
+			\item 偶函数的图象关于 $\bm{y}$\textbf{轴}对称。
+			\item 常见偶函数：$f(x)=x^2$，$f(x)=|x|$，$f(x)=\cos x$，$f(x)=c$（常数函数）。
+		\end{itemize}
+	\end{remark}
+	\begin{tip}
+		定义域关于原点对称是函数具有奇偶性的\textbf{必要条件}。
+	\end{tip}
+\end{frame}
+
+\begin{frame}{奇函数的定义}
+	\begin{definition}[奇函数]
+		设函数 $f(x)$ 的定义域为 $D$，若对任意 $x\in D$，都有 $-x\in D$，且
+		\[
+		f(-x)=-f(x),
+		\]
+		则称 $f(x)$ 为\textbf{奇函数}。
+	\end{definition}
+	\pause
+	\begin{remark}
+		\begin{itemize}
+			\item 奇函数的图象关于\textbf{原点}对称。
+			\item 常见奇函数：$f(x)=x$，$f(x)=x^3$，$f(x)=\sin x$，$f(x)=\tan x$。
+		\end{itemize}
+	\end{remark}
+	
+\end{frame}
+\begin{frame}
+	\begin{sikao}
+		若一个函数为奇函数，则$f(0)=$?，反之成立吗？
+	\end{sikao}	
+\end{frame}
+\begin{frame}[allowframebreaks]{非奇非偶函数与既奇又偶函数}
+	\begin{definition}[非奇非偶函数]
+		若函数 $f(x)$ 既不满足 $f(-x)=f(x)$，也不满足 $f(-x)=-f(x)$，则称 $f(x)$ 为\textbf{非奇非偶函数}。
+	\end{definition}
+	
+	\begin{example}{1}
+		$f(x)=x^2+2x+1$ 是非奇非偶函数。\\
+		验证：$f(1)=4$，$f(-1)=0$，既不等于 $f(1)$ 也不等于 $-f(1)$。
+	\end{example}
+	
+	\begin{definition}[既奇又偶函数]
+		若函数 $f(x)$ 同时满足 $f(-x)=f(x)$ 和 $f(-x)=-f(x)$，则称 $f(x)$ \textbf{既奇又偶}。
+	\end{definition}
+	
+	\begin{theorem}
+		既奇又偶的函数必为 $f(x)\equiv 0$（在定义域内恒为零），且定义域关于原点对称。
+	\end{theorem}
+\end{frame}
+\section{判断方法}
+
+\begin{frame}{判断奇偶性的标准步骤}
+	\begin{enumerate}
+		\item \textbf{第一步：求定义域。}
+		\par 判断定义域是否关于原点对称。若不对称，直接判定为\textbf{非奇非偶}。
+		\item \textbf{第二步：计算 $f(-x)$。}
+		\par 将解析式中所有 $x$ 替换为 $-x$，化简。
+		\item \textbf{第三步：比较 $f(-x)$ 与 $f(x)$、$-f(x)$。}
+		\begin{itemize}
+			\item 若 $f(-x)=f(x)$ $\Rightarrow$ \textbf{偶函数}。
+			\item 若 $f(-x)=-f(x)$ $\Rightarrow$ \textbf{奇函数}。
+			\item 若两者均不成立 $\Rightarrow$ \textbf{非奇非偶}。
+			\item 若两者均成立 $\Rightarrow$ \textbf{既奇又偶}（即 $f(x)\equiv0$）。
+		\end{itemize}
+	\end{enumerate}
+	\begin{tip}
+		判断时，先看定义域，再看解析式，缺一不可！
+	\end{tip}
+\end{frame}
+
+\section{性质与证明}
+
+\begin{frame}{奇函数在原点处的性质}
+	\begin{theorem}[奇函数在 $x=0$ 处的值]
+		若奇函数 $f(x)$ 在 $x=0$ 处有定义，则 $f(0)=0$。
+	\end{theorem}
+	\pause
+	\begin{proof}
+		由奇函数的定义，对任意 $x$ 有 $f(-x)=-f(x)$。\\
+		取 $x=0$，则 $f(0)=f(-0)=-f(0)$。\\
+		移项得 $2f(0)=0$，故 $f(0)=0$。
+	\end{proof}
+	\pause
+	\begin{remark}
+		\begin{itemize}
+			\item 若奇函数在 $x=0$ 处无定义（如 $f(x)=\frac1x$），则此结论不适用。
+			\item 该性质常用于求参数值：若 $f(x)$ 为奇函数且定义在 $\mathbb{R}$ 上，则必有 $f(0)=0$。
+		\end{itemize}
+	\end{remark}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{奇偶函数的运算性质}
+	\begin{theorem}[四则运算的奇偶性]
+		设 $f(x)$，$g(x)$ 定义域相同且关于原点对称，则：
+		\begin{center}
+			\begin{tabular}{c|c}
+				\toprule
+				运算 & 奇偶性 \\
+				\midrule
+				奇 $\pm$ 奇 & 奇 \\
+				偶 $\pm$ 偶 & 偶 \\
+				奇 $\pm$ 偶 & 非奇非偶（除非其一恒为零）\\
+				奇 $\times$ 奇 & 偶 \\
+				偶 $\times$ 偶 & 偶 \\
+				奇 $\times$ 偶 & 奇 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+	\end{theorem}
+	\begin{proof}
+		仅证"奇×奇=偶"。设 $F(x)=f(x)g(x)$，则
+		\[
+		F(-x)=f(-x)g(-x)=[-f(x)]\cdot[-g(x)]=f(x)g(x)=F(x).
+		\]
+		故 $F(x)$ 为偶函数。其余类似可证。
+	\end{proof}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{复合函数的奇偶性}
+	\begin{theorem}[复合函数的奇偶性]
+		设 $u=g(x)$，$y=f(u)$，记 $F(x)=f(g(x))$，则：
+		\begin{itemize}
+			\item 若 $g$ 为奇函数，$f$ 为奇函数 $\Rightarrow$ $F$ 为奇函数。
+			\item 若 $g$ 为偶函数 $\Rightarrow$ $F$ 为偶函数（无论 $f$ 的奇偶性）。
+			\item 若 $g$ 为奇函数，$f$ 为偶函数 $\Rightarrow$ $F$ 为偶函数。
+		\end{itemize}
+	\end{theorem}
+	\begin{proof}
+		仅证第一条。设 $g(-x)=-g(x)$，$f(-u)=-f(u)$，则
+		\[
+		F(-x)=f(g(-x))=f(-g(x))=-f(g(x))=-F(x).
+		\]
+		故 $F$ 为奇函数。
+	\end{proof}
+	\begin{remark}
+		口诀："有偶则偶，全奇才奇"。
+	\end{remark}
+\end{frame}
+
+\section{例题精讲}
+
+\begin{frame}{例题1——判断奇偶性}
+	\begin{example}{1}[2025][全国卷][高一][期中][第1题]
+		判断下列函数的奇偶性：
+		\begin{enumerate}
+			\item $f(x)=x^4-2x^2$
+			\item $f(x)=x^3+x$
+			\item $f(x)=\sqrt{x^2-1}$
+			\item $f(x)=|x+1|-|x-1|$
+		\end{enumerate}
+	\end{example}
+\end{frame}
+
+\begin{frame}{例题1——解析}
+	\begin{solutions}
+		\begin{enumerate}
+			\item 定义域 $\mathbb{R}$ 对称。$f(-x)=(-x)^4-2(-x)^2=x^4-2x^2=f(x)$，故为\textbf{偶函数}。
+			\item 定义域 $\mathbb{R}$ 对称。$f(-x)=(-x)^3+(-x)=-x^3-x=-(x^3+x)=-f(x)$，故为\textbf{奇函数}。
+			\item 由 $x^2-1\ge0$ 得 $x\le-1$ 或 $x\ge1$，定义域关于原点对称。
+			$f(-x)=\sqrt{(-x)^2-1}=\sqrt{x^2-1}=f(x)$，故为\textbf{偶函数}。
+			\item 定义域 $\mathbb{R}$ 对称。
+			$f(-x)=|(-x)+1|-|(-x)-1|=|1-x|-|-x-1|$。
+			又 $-f(x)=-|x+1|+|x-1|$。
+			$f(1)=|2|-|0|=2$，$f(-1)=|0|-|-2|=-2$，满足 $f(-1)=-f(1)$。
+			更一般地，$f(-x)=-f(x)$ 恒成立，故为\textbf{奇函数}。
+		\end{enumerate}
+	\end{solutions}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{例题2——利用奇偶性求解析式}
+	\begin{example}{4}[2025][全国][高一][月考][第2题]
+		已知 $f(x)$ 是定义在 $\mathbb{R}$ 上的奇函数，且当 $x>0$ 时，$f(x)=x^2-2x$。\\
+		求 $f(x)$ 在 $\mathbb{R}$ 上的解析式。
+	\end{example}
+	\begin{solutions}
+		\begin{itemize}
+			\item 当 $x>0$ 时，$f(x)=x^2-2x$（已知）。
+			\item 当 $x=0$ 时，由奇函数性质 $f(0)=0$。
+			\item 当 $x<0$ 时，则 $-x>0$，\\
+			$f(-x)=(-x)^2-2(-x)=x^2+2x$。\\
+			由奇函数定义 $f(x)=-f(-x)=-x^2-2x$。
+		\end{itemize}
+		综上：
+		\[
+		f(x)=\begin{cases}
+			x^2-2x, & x>0,\\[2pt]
+			0, & x=0,\\[2pt]
+			-x^2-2x, & x<0.
+		\end{cases}
+		\]
+	\end{solutions}
+\end{frame}
+
+\begin{frame}{例题3——利用奇偶性求值}
+	\begin{example}{3}[2025][江苏][高一][期中][第3题]
+		已知函数 $f(x)=ax^3+bx+5$，且 $f(3)=7$，求 $f(-3)$ 的值。
+	\end{example}
+	\pause
+	\begin{solutions}
+		令 $g(x)=ax^3+bx$，则 $g(x)$ 为奇函数（奇+奇=奇）。\\
+		$f(x)=g(x)+5$。\\
+		由 $f(3)=g(3)+5=7$，得 $g(3)=2$。\\
+		由奇函数性质 $g(-3)=-g(3)=-2$。\\
+		故 $f(-3)=g(-3)+5=-2+5=3$。
+	\end{solutions}
+	\pause
+	\begin{tip}
+		技巧：分离奇函数部分 $g(x)$，利用 $g(-x)=-g(x)$ 求解。
+	\end{tip}
+\end{frame}
+
+\begin{frame}{例题4——奇偶性与单调性综合}
+	\begin{example}{4}[2025][北京][高一][期末][第5题]
+		定义在 $[-2,2]$ 上的偶函数 $f(x)$ 在 $[0,2]$ 上单调递减，且 $f(1-m)<f(m)$，求实数 $m$ 的取值范围。
+	\end{example}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{例题4——解析}
+	\begin{solutions}
+		由 $f(x)$ 为偶函数，有 $f(x)=f(|x|)$。\\
+		原不等式 $f(1-m)<f(m)$ 等价于 $f(|1-m|)<f(|m|)$。\\[3mm]
+		$f(x)$ 在 $[0,2]$ 上单调递减，故 $|1-m|>|m|$。\\[3mm]
+		同时需满足定义域：
+		\[
+		\begin{cases}
+			-2\le 1-m\le 2,\\
+			-2\le m\le 2.
+		\end{cases}
+		\]
+		解 $|1-m|>|m|$：平方得 $(1-m)^2>m^2\Rightarrow 1-2m>0\Rightarrow m<\dfrac12$。\\
+		解定义域：$-2\le 1-m\le 2\Rightarrow -1\le m\le 3$；$-2\le m\le 2$。\\
+		取交集得 $m\in[-1,2]\cap[-2,2]\cap\left(-\infty,\frac12\right)=[-1,\frac12)$。
+	\end{solutions}
+	\vspace{2mm}
+	\color{ProofRed}\textbf{答案：$m\in[-1,\frac12)$。}
+\end{frame}
+
+\section{课堂练习}
+
+\begin{frame}{练习1——选择题}
+	\begin{exercise}{1}[2025][广东][高一][期中][第1题]
+		下列函数中，既是偶函数又在 $(0,+\infty)$ 上单调递增的是
+		\begin{choices}
+			\choice{$y=x^3$}
+			\choice{$y=|x|+1$}
+			\choice{$y=-x^2$}
+			\choice{$y=2^{-x}$}
+		\end{choices}	
+	\end{exercise}
+	
+\end{frame}
+
+\begin{frame}{练习1——答案与解析}
+	\begin{solutions}
+		\textbf{A.} $y=x^3$ 是奇函数，$\times$\\
+		\textbf{B.} $y=|x|+1$ 是偶函数，在 $(0,+\infty)$ 上 $y=x+1$ 单调递增，$\checkmark$\\
+		\textbf{C.} $y=-x^2$ 是偶函数，但在 $(0,+\infty)$ 上单调递减，$\times$\\
+		\textbf{D.} $y=2^{-x}$ 非奇非偶，$\times$
+	\end{solutions}
+	\begin{answer}
+		\textbf{B}
+	\end{answer}
+\end{frame}
+
+\begin{frame}{练习2——选择题}
+	\begin{exercise}{2}[2025][浙江][高一][月考][第2题]
+		若函数 $f(x)=\dfrac{x+a}{x^2+1}$ 为奇函数，则实数 $a$ 的值为
+	\end{exercise}
+	\begin{choices}
+		\choice{$1$}
+		\choice{$-1$}
+		\choice{$0$}
+		\choice{$2$}
+	\end{choices}
+\end{frame}
+
+\begin{frame}{练习2——答案与解析}
+	\begin{solutions}
+		方法一（利用 $f(0)=0$）：\\
+		$f(x)$ 定义域为 $\mathbb{R}$，由奇函数性质 $f(0)=0$，\\
+		即 $\dfrac{0+a}{0^2+1}=a=0$，故 $a=0$。\\[3mm]
+		方法二（利用 $f(-x)=-f(x)$）：\\
+		$f(-x)=\dfrac{-x+a}{x^2+1}$，$-f(x)=-\dfrac{x+a}{x^2+1}$。\\
+		由 $f(-x)=-f(x)$ 得 $-x+a=-x-a$，解得 $a=0$。
+	\end{solutions}
+	\begin{answer}
+		\textbf{C}
+	\end{answer}
+\end{frame}
+
+\begin{frame}{练习3——填空题}
+	\begin{exercise}{3}[2025][山东][高一][期中][第3题]
+		已知 $f(x)$ 是定义在 $\mathbb{R}$ 上的奇函数，当 $x\ge0$ 时，$f(x)=x^2+2x$，则 $f(-3)=$ \underline{\hspace{1.5cm}}。
+	\end{exercise}
+	\pause
+	\begin{solutions}
+		$f(-3)=-f(3)=-(3^2+2\times3)=-(9+6)=-15$。
+	\end{solutions}
+	\begin{answer}
+		$-15$
+	\end{answer}
+\end{frame}
+
+\begin{frame}{练习4——解答题}
+	\begin{exercise}{4}[2025][全国][高一][竞赛][第4题]
+		设 $f(x)$ 是定义在 $\mathbb{R}$ 上的奇函数，且对任意实数 $x$ 有 $f(x+2)=-f(x)$。
+		\begin{enumerate}
+			\item 证明：$f(x)$ 是以 $4$ 为周期的周期函数；
+			\item 若 $f(1)=3$，求 $f(2025)$ 的值。
+		\end{enumerate}
+	\end{exercise}
+\end{frame}
+
+\begin{frame}{练习4——解析}
+	\begin{solutions}
+		\textbf{(1)} 由 $f(x+2)=-f(x)$，\\
+		则 $f(x+4)=f[(x+2)+2]=-f(x+2)=-[-f(x)]=f(x)$。\\
+		故 $f(x)$ 是以 $4$ 为周期的周期函数。\\[3mm]
+		\textbf{(2)} $2025=4\times506+1$，\\
+		由周期性 $f(2025)=f(1)=3$。
+	\end{solutions}
+	\begin{answer}
+		(1) 见证明；(2) $f(2025)=3$
+	\end{answer}
+\end{frame}
+
+\section{课堂小结}
+\begin{frame}{本节知识框架}
+	
+	% ---------- 顶部总标题 ----------
+	\begin{center}
+		{\Large\bfseries\color{PrimaryGreen} 函数的奇偶性 · 知识框架}
+		\vspace{2mm}
+	\end{center}
+	
+	% ---------- 三栏布局 ----------
+	\begin{columns}[T]  % [T] 表示顶部对齐
+		\columnwidth\textwidth  % 强制等宽布局
+		
+		% ===== 第一列：定义与判断 =====
+		\begin{column}{0.32\textwidth}
+			\centering
+			\begin{tikzpicture}[
+				box/.style={draw=PrimaryGreen, fill=SoftGreen, rounded corners,
+					minimum width=2.8cm, minimum height=0.75cm,
+					align=center, font=\small\bfseries},
+				smallbox/.style={draw=PrimaryGreen!60, fill=SoftGreen!50, rounded corners,
+					minimum width=2.6cm, minimum height=0.65cm,
+					align=center, font=\footnotesize},
+				arrow/.style={->, >=Stealth, PrimaryGreen, thick, shorten >=1pt, shorten <=1pt}
+				]
+				\node[box] (t1) {定义与判断};
+				\node[smallbox, below=0.5cm of t1] (i1) {偶函数：$f(-x)=f(x)$};
+				\node[smallbox, below=0.3cm of i1] (i2) {奇函数：$f(-x)=-f(x)$};
+				\node[smallbox, below=0.3cm of i2] (i3) {前提：定义域对称};
+				\draw[arrow] (t1) -- (i1);
+				\draw[arrow] (i1) -- (i2);
+				\draw[arrow] (i2) -- (i3);
+			\end{tikzpicture}
+		\end{column}
+		
+		% ===== 第二列：基本性质 =====
+		\begin{column}{0.32\textwidth}
+			\centering
+			\begin{tikzpicture}[
+				box/.style={draw=PrimaryGreen, fill=SoftGreen, rounded corners,
+					minimum width=2.8cm, minimum height=0.75cm,
+					align=center, font=\small\bfseries},
+				smallbox/.style={draw=PrimaryGreen!60, fill=SoftGreen!50, rounded corners,
+					minimum width=2.6cm, minimum height=0.65cm,
+					align=center, font=\footnotesize},
+				arrow/.style={->, >=Stealth, PrimaryGreen, thick, shorten >=1pt, shorten <=1pt}
+				]
+				\node[box] (t2) {基本性质};
+				\node[smallbox, below=0.5cm of t2] (j1) {四则运算的奇偶性};
+				\node[smallbox, below=0.3cm of j1] (j2) {复合函数的奇偶性};
+				\node[smallbox, below=0.3cm of j2] (j3) {$f(0)=0$（奇函数）};
+				\draw[arrow] (t2) -- (j1);
+				\draw[arrow] (j1) -- (j2);
+				\draw[arrow] (j2) -- (j3);
+			\end{tikzpicture}
+		\end{column}
+		
+		% ===== 第三列：常见应用 =====
+		\begin{column}{0.32\textwidth}
+			\centering
+			\begin{tikzpicture}[
+				box/.style={draw=PrimaryGreen, fill=SoftGreen, rounded corners,
+					minimum width=2.8cm, minimum height=0.75cm,
+					align=center, font=\small\bfseries},
+				smallbox/.style={draw=PrimaryGreen!60, fill=SoftGreen!50, rounded corners,
+					minimum width=2.6cm, minimum height=0.65cm,
+					align=center, font=\footnotesize},
+				arrow/.style={->, >=Stealth, PrimaryGreen, thick, shorten >=1pt, shorten <=1pt}
+				]
+				\node[box] (t3) {常见应用};
+				\node[smallbox, below=0.5cm of t3] (k1) {求函数解析式};
+				\node[smallbox, below=0.3cm of k1] (k2) {求函数值};
+				\node[smallbox, below=0.3cm of k2] (k3) {解不等式};
+				\draw[arrow] (t3) -- (k1);
+				\draw[arrow] (k1) -- (k2);
+				\draw[arrow] (k2) -- (k3);
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+	
+	% ---------- 底部提示 ----------
+	\vspace{5mm}
+	\begin{tip}
+		课后请完成配套练习册 P42--P45 相关习题。
+	\end{tip}
+	
+\end{frame}
+\begin{frame}{课后作业}
+	\begin{quan}
+		\item 教材 P78 习题3.2：第1、2、3题（判断奇偶性）。
+		\item 教材 P79 习题3.2：第5、6题（利用奇偶性求解析式）。
+		\item 思考题：是否存在定义在 $\mathbb{R}$ 上的函数，既是奇函数又是偶函数？若有，请举例。
+	\end{quan}
+	\vspace{5mm}
+	\begin{center}
+		\color{PrimaryGreen}\rule{0.6\linewidth}{1pt}
+		\vspace{2mm}
+		{\large 谢谢大家！}
+	\end{center}
+\end{frame}
