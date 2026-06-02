@@ -1,0 +1,152 @@
+\documentclass[
+showanswers,             % 显示答案（默认）
+answercolor=red,      % 答案颜色（默认 red）
+numbercolor=purple      % 题号颜色（默认 blue）
+]{biscuits}
+
+
+
+
+\begin{document}
+
+% ========== 标题 ==========
+\title{ 一份适合高中数学题目排版的\LaTeX}
+\author{Biscuits}
+\date{2025.8}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\chapter{测试}
+\section{集合与常用逻辑用语}
+\parttitle{填空题}
+% ---------- 例题 1 ----------
+\begin{example}{3}[2023][新课标1][高一][期中][第1题]
+	已知集合 $A=\{x\mid x^2-3x+2=0\}$，$B=\{x\mid 0<x<5, x\in\mathbb{N}\}$，
+	则满足 $A\subseteq C\subseteq B$ 的集合 $C$ 的个数是 \blankline
+	\kaodian{集合与常用逻辑用语-集合-集合间的基本关系-子集与真子集}
+	\begin{proof}
+		
+		\begin{answer}
+			4
+		\end{answer}
+		\begin{solutions}
+			解方程 $x^2-3x+2=0$ 得 $A=\{1,2\}$；
+			由 $0<x<5, x\in\mathbb{N}$ 得 $B=\{1,2,3,4\}$。
+			满足 $A\subseteq C\subseteq B$ 的集合 $C$ 必须含有 $1,2$，
+			且可以从 $\{3,4\}$ 中任意选取（可选 $0,1,2$ 个元素），
+			故共有 $2^2=4$ 个，分别为 $\{1,2\}$，$\{1,2,3\}$，$\{1,2,4\}$，$\{1,2,3,4\}$。
+		\end{solutions}
+	\end{proof}
+\end{example}
+
+% ---------- 例题 2 ----------
+\begin{example}{3}[2022][北京][高一][期末][第3题]
+	
+\kaodian{集合与常用逻辑用语-集合-集合间的基本运算-补集与全集}
+设全集 $U=\mathbb{R}$，集合 $A=\{x\mid x^2-4x+3<0\}$，则 $\complement_U A$ 等于\blankline
+	\begin{proof}
+		
+		\begin{answer}
+			$\{x\mid x\le 1\ \text{或}\ x\ge 3\}$
+		\end{answer}
+		\begin{solutions}
+			$x^2-4x+3<0 \Rightarrow (x-1)(x-3)<0 \Rightarrow 1<x<3$，
+			所以 $A=(1,3)$，故 $\complement_U A = (-\infty,1]\cup[3,+\infty)$。
+			写成集合形式即为 $\{x\mid x\le 1\ \text{或}\ x\ge 3\}$。
+		\end{solutions}
+	\end{proof}
+\end{example}
+
+\parttitle{选择题}
+% ---------- 例题 3（单选）----------
+\begin{example}{1}[2021][天津][高一][月考][第2题][单选]
+	
+\kaodian{集合与常用逻辑用语-集合-集合间的基本运算-补集与全集}
+已知全集 $U=\{1,2,3,4,5\}$，集合 $A=\{1,2,3\}$，$B=\{2,3,4\}$，则 $\complement_U(A\cap B)=$\blankbox
+	\begin{choices}
+		\choice{$\{1,4,5\}$}
+		\choice{$\{2,3\}$}
+		\choice{$\{1,2,3,4\}$}
+		\choice{$\{1,5\}$}
+	\end{choices}
+	\begin{proof}
+		
+		\begin{answer}
+			A
+		\end{answer}
+		\begin{solutions}
+			$A\cap B = \{2,3\}$，全集 $U=\{1,2,3,4,5\}$，
+			所以 $\complement_U(A\cap B) = \{1,4,5\}$，故选 A。
+		\end{solutions}
+	\end{proof}
+\end{example}
+
+% ---------- 例题 4（多选）----------
+\begin{example}{2}[2024][湖北联考][高一][期中][第9题][多选]
+	
+\kaodian{集合与常用逻辑用语-集合-集合间的基本关系-子集与真子集}
+已知集合 $A=\{x\mid -2\le x\le 5\}$，$B=\{x\mid m+1\le x\le 2m-1\}$，若 $B\subseteq A$，则实数 $m$ 的可能取值为\blankbox
+	\begin{choices}
+		\choice{$0$}
+		\choice{$1$}
+		\choice{$2$}
+		\choice{$3$}
+	\end{choices}
+	\begin{proof}
+		
+		\begin{answer}
+			AB
+		\end{answer}
+		\begin{solutions}
+			答案省略
+		\end{solutions}
+	\end{proof}
+\end{example}
+\parttitle{简答题}
+% ---------- 简答题（无 proof，隐藏后自动留白）----------
+\begin{example}{4}[2024][湖北联考][高一][期中][第17题]
+	
+\kaodian{集合与常用逻辑用语-集合-集合间的基本关系-子集与真子集；等式与不等式-一元二次不等式-一元二次不等式的解法}
+简答题：已知集合 $A=\{x\mid -2\le x\le 5\}$，$B=\{x\mid m+1\le x\le 2m-1\}$，若 $B\subseteq A$，则实数 $m$ 的可能取值为
+	\begin{proof}
+	
+		\begin{answer}
+			$m\le 3$
+		\end{answer}
+		\begin{solutions}
+		\begin{quan}
+			\item 当 $B=\varnothing$ 时，$m+1>2m-1 \Rightarrow m<2$，此时 $B\subseteq A$ 成立；
+			\item 	当 $B\neq\varnothing$ 时，需满足 $\begin{cases} m+1\ge -2 \\ 2m-1\le 5 \\ m\ge 2 \end{cases} \Rightarrow 2\le m\le 3$。
+		\end{quan}	
+		
+		结合\quannum{1},\quannum{2},综上，实数 $m$ 的取值范围是 $m\le 3$。
+		\end{solutions}
+
+	\end{proof}
+
+\end{example}
+\begin{lstlisting}[style=mylatex, caption={ 写一道填空题}]
+	\begin{example}{4}[2024][湖北联考][高一][期中][第17题]
+		
+\kaodian{等式与不等式-一元二次不等式-一元二次不等式的解法}
+简答题：已知集合 $A=\{x\mid -2\le x\le 5\}$，$B=\{x\mid m+1\le x\le 2m-1\}$，若 $B\subseteq A$，则实数 $m$ 的可能取值为
+		\begin{proof}
+			
+			\begin{answer}
+				$m\le 3$
+			\end{answer}
+			\begin{solutions}
+				\begin{quan}
+					\item 当 $B=\varnothing$ 时，$m+1>2m-1 \Rightarrow m<2$，此时 $B\subseteq A$ 成立；
+					\item 	当 $B\neq\varnothing$ 时，需满足 $\begin{cases} m+1\ge -2 \\ 2m-1\le 5 \\ m\ge 2 \end{cases} \Rightarrow 2\le m\le 3$。
+				\end{quan}	
+				
+				结合\quannum{1},\quannum{2},综上，实数 $m$ 的取值范围是 $m\le 3$。
+			\end{solutions}
+		\end{proof}
+		
+	\end{example}
+\end{lstlisting}		
+\end{document}
